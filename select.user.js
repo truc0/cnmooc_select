@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CNMOOC 好大学在线选择题答题情况查看 Revived
 // @namespace    https://github.com/PhotonQuantum/cnmooc_select
-// @version      0.8
+// @version      0.9
 // @description  显示好大学在线测验与作业选择题回答情况
 // @author       fourstring, LightQuantum
 // @match        https://cnmooc.org/study/initplay/*
@@ -17,7 +17,7 @@
   "use strict";
   var answers = [];
   (function (open) {
-    const re = /https:\/\/cnmooc.org\/examSubmit\/\d*\/getExamPaper-\d*_\d*_\d*\.mooc/;
+    const re = /https:\/\/(|www.)cnmooc.org\/examSubmit\/\d*\/getExamPaper-\d*_\d*_\d*\.mooc/;
     XMLHttpRequest.prototype.open = function () {
       this.addEventListener(
         "readystatechange",
